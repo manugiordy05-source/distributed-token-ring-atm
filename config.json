@@ -1,0 +1,30 @@
+{
+	"initial_balance": 1000.0,
+	"token_delay_seconds": 1.5,
+	"nodes": {
+		"ATM1": {
+		"host": "127.0.0.1",
+		"port": 5001,
+		"successor": "ATM2",
+		"has_initial_token": true
+		},
+		"ATM2": {
+			"host": "127.0.0.1",
+			"port": 5002,
+			"successor": "ATM3",
+			"has_initial_token": false
+		},
+		"ATM3": {
+			"host": "127.0.0.1",
+			"port": 5003,
+			"successor": "ATM4",
+			"has_initial_token": false
+		},
+		"ATM4": {
+			"host": "127.0.0.1",
+			"port": 5004,
+			"successor": "ATM1",
+			"has_initial_token": false
+		}
+	}
+}
